@@ -1,0 +1,204 @@
+ <html>
+  <head>
+    <meta charset="UTF-8">
+     <script src="https://kit.fontawesome.com/d01a1cfdbe.js" crossorigin="anonymous"></script>
+  <style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    .gallery .image-description {
+      text-align: center;
+    }
+ 
+    fieldset{
+        border:2px solid rgba(0, 0, 0, 0.628);
+        background: rgba(245, 231, 233, 0.551);
+    }
+    img {
+  border-radius: 50%;
+}
+  .wrapper {
+    position: absolute;
+    width: 80vw;
+    transform:  translate(-50%, -50%);
+    top:50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  
+  
+  i{
+    color: #188cf9;
+    font-size: 2.5em;
+    text-align: center;
+    margin-top:1px;
+  
+  }
+  
+  span.num {
+    color: #4c0341;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  
+  span.text {
+    color: #4c0341;
+    font-size: 1.5em;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 400;
+    line-height: 0;
+  }
+  i{
+    color: #4c0341;
+    font-size: 90px;
+  }
+  @media screen and (max-width:1024px) {
+    .wrapper {
+      width: 85vw;
+    }
+    .containerr1 {
+      height: 26vmin;
+      width: 26vmin;
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .wrapper{
+      width: 90vw;
+      
+      gap: 30px;
+    }
+  
+    .container {
+      width: calc(50% -40px);
+      height: 30vmin;
+      font-size: 13px;
+    }r1
+  }
+  @media screen and (max-width: 480px) {
+    .wrapper{
+      gap: 15px;
+    }
+  
+    .containerr1 {
+      width: 100%;
+      height: 30vmin;
+      font-size: 8px;
+    }
+ 
+
+  </style>
+  </head>
+<header style="background-color:rgb(41, 40, 40); color:bisque;"><br><br><center><h1>THE EVENT EXPERTS</h1><h3>-About Us Page</h3><br><br></center></header>
+  <body>
+  
+    <div class="wrapper">
+      <div class="containerr1">
+        <i class="fa-solid fa-users"></i><br><Br>
+         <span class="text">Workers</span><br><Br>
+        <span class="num" data-val="798">000</span>
+       
+      </div>
+      <div class="containerr1">
+        <i class="fas fa-user-alt"></i><br><Br>
+        <span class="text">&nbsp;&nbsp;&nbsp;Manager</span><br><Br>
+        <span class="num" data-val="40">000</span>
+        
+      </div>
+      <div class="containerr1">
+        <i class="fas fa-user-edit"></i><br><Br>
+            <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Boss</span><br><Br>
+        <span class="num" data-val="4">000</span>
+    
+      </div>
+    </div>
+    <script>
+      let valueDisplays = document.querySelectorAll(".num");
+  let interval = 4000;
+  
+  valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(function () {
+      startValue +=1;
+      valueDisplay.textContent = startValue;
+      if (startValue == endValue) {
+        clearInterval(counter);
+      }
+    }, duration);
+  });</script>
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="gallery">
+    <div>
+        <fieldset>
+          <p class="image-description"><b>CEO</b></p>
+          <center><img src="https://cdn.iconscout.com/icon/free/png-512/avatar-370-456322.png" alt="Avatar" style="width:200px"></center> 
+          <p class="image-description">Rahul Raichand</p>
+    </fieldset>
+    </div>
+
+    <div>
+      <fieldset>
+        <p class="image-description"><b>Boss [Main Head]</b></p>
+        <center><img src="http://www.levibio.it/wp-content/uploads/2019/03/female-avatar-profile-icon-round-woman-face-vector-18307274.jpg" alt="Avatar" style="width:200px"> </center>
+        <p class="image-description">Pooja Bhatt</p>
+  </fieldset>
+  </div>
+
+  <div>
+    <fieldset>
+      <p class="image-description"><b>Boss [1]</b></p>
+      <center><img src="https://cdn3.iconfinder.com/data/icons/avatars-flat/33/man_5-1024.png" alt="Avatar" style="width:200px"> </center>
+      <p class="image-description">Siddhanth</p>
+</fieldset>
+</div>
+
+<div>
+    <fieldset>
+      <p class="image-description"><b>Boss [2]</b></p>
+      <center><img src="https://cdn0.iconfinder.com/data/icons/team-work-and-organization-2/128/78-512.png" alt="Avatar" style="width:200px"> </center>
+      <p class="image-description">Raman</p>
+</fieldset>
+</div>
+
+<div>
+    <fieldset>
+      <p class="image-description"><b>Boss [3]</b></p>
+      <center><img src="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/61-1024.png" alt="Avatar" style="width:200px"> </center>
+      <p class="image-description">Akshara</p>
+</fieldset>
+</div>
+
+  <div>
+    <fieldset>
+      <p class="image-description"><b>Manager [Main Head]</b></p>
+      <center><img src="https://www.shareicon.net/data/2016/09/15/829452_user_512x512.png" alt="Avatar" style="width:200px"> </center>
+      <p class="image-description">Anjali Sharma<br><a href="boss.html">Click Here to View the Manager List</a></p>
+</fieldset>
+</div>
+  </div></body>
+  <footer style="background-color:rgb(41, 40, 40);"><br><br><br><br></footer>
+  </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>bcombo</title>
+  <style>
+        .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .gallery .image-description {
+      text-align: center;
+    }
+    header{
+        background-color:#0c0cc0;
+    }
+    footer{
+        background-color:#0c0cc0;
+    }
+    body{
+        background-color: rgb(222, 185, 140);
+    }
+    fieldset{
+        border:2px solid black;
+        background: rgb(203, 90, 109);
+    }
+  </style>
+</head>
+<center>
+    <header><br><br></header>
+    </center>
+<body>
+  <div class="gallery">
+    <div>
+        <fieldset>
+      <img src="https://static.toiimg.com/photo/78181002.cms?imgsize=489649" alt="Image 1">
+      <p class="image-description">Surprise Midnight Party</p>
+    </fieldset>
+    </div>
+    <div>
+    <fieldset>
+      <img src="https://i.pinimg.com/736x/10/ca/87/10ca87e557f28fd477c78eec1786d0dc--birthday-photo-shoots-st-birthday-photos.jpg" alt="Image 2">
+      <p class="image-description">Birthday Photoshoot</p>
+    </fieldset>
+    </div>
+    <div>
+    <fieldset>
+      <img src="https://tse1.mm.bing.net/th?id=OIP.6Qh8BXSQa7fiGpO9e02H7AHaE8&pid=Api&P=0&h=180" alt="Image 3">
+      <p class="image-description">Evening Party</p>
+    </fieldset>
+    </div>
+    </center>
+  </div>
+</body>
+<footer><br><br><br></footer>
+</html>

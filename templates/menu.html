@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+        background-color:aqua;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      position: relative;
+      margin: 10px;
+    }
+
+    .image {
+      width: 300px; /* Adjust this according to your image size */
+      height: auto; /* Adjust this according to your image size */
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px; 
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+    }
+    header{
+        background-color:#0c0cc0;
+    }
+    footer{
+        background-color:#0c0cc0;
+    }
+  </style>
+</head>
+<body>
+    <center>
+    <header><h1 style="color:aliceblue;"><b>Catering Menu List</b></h1></header>
+</center>
+  <div class="container">
+    <div class="box">
+      <img class="image" src="static\fm1.jpeg" alt="Image 1"  style="border:3px solid black;">
+      <div class="text"><a href="templates\m1.pdf">Catering Menu 1</a></div>
+    </div>
+    <div class="box">
+      <img class="image" src="static\fm5.jpeg" alt="Image 2" style="border:3px solid black;">
+      <div class="text"><a href="templates\m2.pdf">Catering Menu 2</a></div>
+    </div>
+    <div class="box">
+      <img class="image" src="static\fm3.jpeg" alt="Image 3" style="border:3px solid black;">
+      <div class="text"><a href="templates\m3.pdf">Catering Menu 3</a></div>
+    </div>
+
+    <div class="box">
+        <img class="image" src="static\fm4.jpeg" alt="Image 3" style="border:3px solid black;">
+        <div class="text"><a href="templates\m4.pdf">Catering Menu 4</a></div>
+      </div>
+
+  </div>
+  <footer><br><br></footer>
+</body>
+</html>

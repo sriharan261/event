@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    
+    .image-container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    /* Adjust the width and margin to fit two images in a row */
+    .image-container:nth-child(2n) {
+      margin-right: 20px;
+    }
+
+    /* Adjust the width and margin to fit two images in a row */
+    .image-container:nth-child(2n+1) {
+      margin-left: 20px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s;
+    }
+
+    .image-container:hover img {
+      opacity: 0.7;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .image-container:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .image-container:hover .overlay-content {
+      opacity: 1;
+    }
+
+  </style>
+</head>
+<header style="background-color:rgb(41, 40, 40); color:bisque;"><br><br><center><h1>THE EVENT EXPERTS</h1><h3>-Service Page</h3><br><br></center></header>
+
+  <body style="background: linear-gradient(to bottom, #d5e80c 0%, #eb2424 100%)">
+<h1>Our Services</h1>
+<center>
+<body>
+  
+
+  <div class="image-container">
+    <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image 2">
+    <div class="overlay"></div>
+    <div class="overlay-content">
+      <h3>Event Planning</h3>
+      <p>Always Remarkable Special Events is organized and acheive tremendous good will.</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://images.pexels.com/photos/8828586/pexels-photo-8828586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image 3">
+    <div class="overlay"></div>
+    <div class="overlay-content">
+      <h3>Venue Selection</h3>
+      <p>Prominent place are located always for the events.</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="static\image.jpg" alt="Image 1">
+    <div class="overlay"></div>
+    <div class="overlay-content">
+      <h3>Dress Designers</h3>
+      <p>The best costumers are finalized every year.</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://i.pinimg.com/originals/98/33/08/9833085c708939385d4eb05532b6d5f1.jpg" alt="Image 4">
+    <div class="overlay"></div>
+    <div class="overlay-content">
+      <h3>Decorations</h3>
+      <p>Art & Designs are given by the top decorators.</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://images.pexels.com/photos/17057198/pexels-photo-17057198/free-photo-of-close-up-of-a-viewfinder-of-a-camera-photographing-bride-and-groom.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image 5">
+    <div class="overlay"></div>
+    <div class="overlay-content">
+      <h3>Photography</h3>
+      <p>Professional Photographers will be aligned for the events.</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://static.businessworld.in/article/article_extra_large_image/1516003632_d8yz3S_catering2470.jpg" alt="Image 6">
+    <div class="overlay"></div>
+    <div class="overlay-content">
+      <h3>Catering</h3>
+      <p>Hygenic & delicious food preparations team will be confirmed.</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://i.pinimg.com/originals/69/68/18/6968185a28462724bc0bad9a639ff623.jpg" alt="Image 7">
+    <div class="overlay"></div>
+    <div class="overlay-content">
+      <h3>Entertainment</h3>
+      <p>Entertainment is part of the events.</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://cdn.pixabay.com/photo/2016/11/22/19/15/hand-1850120_1280.jpg" alt="Image 8">
+    <div class="overlay"></div>
+    <div class="overlay-content">
+      <h3>DJ Party</h3>
+      <p>By default always dj will be played.</p>
+    </div>
+  </div>
+
+</body>
+</center>
+<footer style="background-color:rgb(41, 40, 40);"><br><br><br><br></footer>
+
+</html>

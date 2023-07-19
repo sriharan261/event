@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>book</title>
+    <header style="background-color:grey;"><br><br><center><h1>THE EVENT EXPERTS</h1><br><h3>-Home Page</h3><br><br></center></header>
+    <style>
+        section {
+            padding: 2rem 9%;
+        }
+
+        .home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+            position: relative;
+            z-index: 0;
+        }
+
+        .home .content {
+            text-align: center;
+        }
+
+        .home .content h3 {
+            font-size: 4.5rem;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .1);
+        }
+
+        .home .content p {
+            font-size: 2.5rem;
+            color: #fff;
+            padding: .5rem 0;
+        }
+
+        .home .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .home .controls {
+            padding: 1rem;
+            border-radius: 5rem;
+            background: rgba(0, 0, 0, .7);
+            position: relative;
+            top: 10rem;
+        }
+
+        .home .controls .vid-btn {
+            height: 2rem;
+            width: 2rem;
+            display: inline-block;
+            border-radius: 50%;
+            background: #fff;
+            cursor: pointer;
+            margin: 0 .5rem;
+        }
+
+        .home .controls .vid-btn.active {
+            background: orange;
+        }
+        .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container img {
+      width: 500px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+      margin-right: 20px; /* Add spacing between the image and paragraph */
+    }
+
+    .container p {
+      font-size: 16px; /* Adjust the font size as needed */
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+    .gallery .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    .gallery .box-container .box {
+        overflow: hidden;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+        border: 1rem solid #fff;
+        border-radius: 1rem;
+        flex: 0 0 calc(33.333% - 1.5rem);
+        max-width: calc(33.333% - 1.5rem);
+        height: 15rem;
+        position: relative;
+    }
+    .gallery .box-container .box img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .gallery .box-container .box .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, .7);
+        padding: 1rem;
+        transition: top 0.5s ease;
+    }
+    .gallery .box-container .box:hover .content {
+        top: 100%;
+    }
+    .gallery .box-container .box .content h3 {
+        font-size: 1.5rem;
+        color: var(--orange);
+        margin: 0;
+    }
+    .gallery .box-container .box .content p {
+        font-size: 1rem;
+        color: #eee;
+        padding: 1rem 0;
+        margin: 0;
+    }
+    h1{
+        font-size:30;
+    }
+    h3{
+        font-size:20;
+    }
+    </style>
+    <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let videoBtn = document.querySelectorAll('.vid-btn');
+
+            videoBtn.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelector('.controls .active').classList.remove('active');
+                    btn.classList.add('active');
+                    let src = btn.getAttribute('data-src');
+                    document.querySelector('#video-slider').src = src;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<section class="home" id="Tab1">
+    <div class="content">
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="{{ url_for('static', filename='videos/pexels.mp4')  }}" type='video/mp4'></span>
+        <span class="vid-btn" data-src="static\videos\video (1080p) (1).mp4"></span>
+        <span class="vid-btn" data-src="static\videos\video (1080p).mp4"></span>
+        <span class="vid-btn" data-src="static\videos\video (2160p).mp4"></span>
+        <span class="vid-btn" data-src="static\videos\pexels-pavel-danilyuk-8776123 (2160p).mp4"></span>
+        <span class="vid-btn" data-src="static\videos\pexels-pavel-danilyuk-8776122 (2160p).mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="static\videos\pexels.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+</section>
+</body>
+<br> 
+<br>
+<br>
+<div class="container" style="background-color:#F98B88;">
+    <img src="http://i.ytimg.com/vi/doVoWENl7Yg/maxresdefault.jpg" alt="Image" width="150" height="20">
+    <h3><b style="font-size:30;"><u>Introduction</u></b><br><br>
+The Company "The Event Experts" was established in the year of 2013 of may.
+        <br>
+        Basically Event Management is a company providing support or services of event in India & USA. we extend the event support for the Corporate event, Marraige Event, School & College Event, Commercial event, etc... in India & Abroad
+        <br>
+        The strength of the company is having major event specialist for the various segment of market.
+    </h3>  </div>
+</body>
+<center>
+    <br><br>
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="https://images.pexels.com/photos/4791745/pexels-photo-4791745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:50%">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="https://images.pexels.com/photos/2337816/pexels-photo-2337816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:50%">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="https://images.pexels.com/photos/3171823/pexels-photo-3171823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:50%">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)"></a>
+          <a class="next" onclick="plusSlides(1)"></a>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+          
+          <script>
+          let slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+          }
+          </script>
+          </center>
+          <br>
+          <br><br>
+          <h1 style="font-color:grey"><center>Features</h1>
+            <h3>
+          <ol style="font-color:grey; font-size:19;">
+            <li>Different set of people are working with us to handle the event more effectively and efficiently.</li>
+            <li>We provide a affordable budget for our clients, we can easily approach for confirming to conduct event.</li>
+            <li>Even in abroad we have a office with expertised to take confirmation of event order to execute the same in a succcesfull manner.</li>
+            <li>In the last 10 years we have conducted almost 1500 events in India and abroad and got a very good recognition in the market and developed a brand image.</li>
+            <li>Now we are in the top 10 category of best event management company in the world.</li>
+            <li>All the success have been acheived in ashort period is only because of our dedicated employees and with the support of our clients.</li>
+        </ol>
+    </h3>
+    </center>
+    <br><br><br>
+<body>
+    <div class="container" style="background-color:#FAAFBA">
+      <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" width="450" height="200">
+      <h1 style="font-size: 50;">Nothing beats a good golf game in ravishing spring field.<br><br><center><button type="button"><b style="font-size:60px; background-color:#C4AEAD">35% Off</b></button></center><br>It's the Event Management Fizz that does the Bizz</h1>
+    </div>
+  </body>
+  <br>
+  <br>
+  <center>
+  <section class="gallery" id="gallery">
+    <div class="box-container">
+        <div class="box">
+            <img src="https://images.pexels.com/photos/382297/pexels-photo-382297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            <div class="content">
+                <h3 style="color:beige;">"Become Familiar <br>With the destination"</h3>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            <div class="content">
+                <h3 style="color:beige;">"Explore the Event location and its surrondings"</h3>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://images.pexels.com/photos/919734/pexels-photo-919734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            <div class="content">
+                <h3 style="color:beige;">"Analyze the local map <br> of Event Planning <br>services"</h3>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://images.pexels.com/photos/6930306/pexels-photo-6930306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            <div class="content">
+                <h3 style="color:beige;">"Build a good local Proffesional network"</h3>
+            </div>
+        </div>
+    </div>
+</section>
+</center>
+<br><br><br>
+<footer><script>
+    function submit(){
+      window.open("submit.html");
+    }
+  </script>
+<!-- <form style="font-size: 30;">
+  <fieldset style="background-color: #ccc;">
+    <legend><h1><b>FEEDBACK FORM</b></h1></legend>
+    <label>Name: <input type="text";></label>
+    <br>
+    <br>
+    <label>Email: <input type="text";></label>
+    <br>
+    <br>
+    <label>Phone Number: <input type="text";></label>
+    <br>
+    <br>
+    <label>Please Rate Our Website</label>
+    <select>
+      <option>1- Very Bad</option>
+      <option>2- Bad</option>
+      <option>3- Average</option>
+      <option>4- Good</option>
+      <option>5- Excellent</option>
+    </select>
+    <br>
+    <br>
+    <label>How could we Improve?</label><br><textarea rows="5" col="10"></textarea>
+    <br>
+    <br>
+    <button type="submit" onclick="submit()" style="font-size: 30">Submit</button>
+  </fieldset> -->
+</form></footer>
+<footer style="background-color:grey;"><br><br><br></footer>
+</body>
+</html>

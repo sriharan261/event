@@ -1,0 +1,21 @@
+
+<table>
+<thead>
+    <td>Name</td>
+    <td>Phone</td>
+    <td>address</td>
+    <td>email</td>
+    <td>eventName</td>
+</thead>
+{% for i in l %}
+ <tr>
+     <td>{{i.name}}/</td>
+     <td>{{i.phone}}</td>
+     <td>{{i.address}}</td>
+     <td>{{i.email}}</td>
+     <td>{{i.eventName}}</td>
+ </tr>
+
+{% endfor%}
+
+</table>

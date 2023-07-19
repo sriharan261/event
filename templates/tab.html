@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        video{
+            width: 1150px;
+            height: 400px;
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: animate 20s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+            100% {
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+
+        .box span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+        }
+
+        .box span:nth-child(1) {
+            transform: rotateY(45deg) translateZ(400px);
+        }
+
+        .box span:nth-child(2) {
+            transform: rotateY(90deg) translateZ(400px);
+        }
+
+        .box span:nth-child(3) {
+            transform: rotateY(135deg) translateZ(400px);
+        }
+
+        .box span:nth-child(4) {
+            transform: rotateY(180deg) translateZ(400px);
+        }
+
+        .box span:nth-child(5) {
+            transform: rotateY(225deg) translateZ(400px);
+        }
+
+        .box span:nth-child(6) {
+            transform: rotateY(270deg) translateZ(400px);
+        }
+
+        .box span:nth-child(7) {
+            transform: rotateY(315deg) translateZ(400px);
+        }
+
+        .box span:nth-child(8) {
+            transform: rotateY(360deg) translateZ(400px);
+        }
+
+        .box span img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='tabcss.css') }}">
+</head>
+<body>
+    <center>
+    <div class="wrapper">
+        <header style="background-color: #171c24; color:bisque; font-size: 100px; font-family:cursive;"><center>The Event Experts</center></header>
+
+        <nav>
+            <input type="checkbox" id="show-search">
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <div class="content">
+                
+                <ul class="links">
+                    <li><a href=samphome>Home</a></li>
+                    <li>
+                        <a href=about class="desktop-link">About Us</a>
+                        
+                    </li>
+                    <li><a href=service>Services</a></li>
+                    <li><a href=works>Works</a></li>
+                    <li>
+                        <a href=hover class="desktop-link">Gallery</a>
+                        
+                    </li>
+                  </ul>
+            </div>
+        </nav>
+        </center>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <video controls autoplay muted preload style="background-color: #0C090A">
+        <source src="static\videos\eventmanagement.mp4" type="video/mp4" width="700px" height="500px">
+    </video>
+<br><br><br<br><br><br><br<br><br>
+
+    <h2 style="font-family: 'UniqueHandwriting', cursive; font-size: 40;">"Welcome to our 
+        vibrant world of unforgettable events! At Events Experts, we believe in 
+        the power of extraordinary experiences. Whether you're envisioning a dazzling gala, a 
+        cutting-edge conference, or a captivating virtual summit, we are your trusted partners 
+        in bringing your vision to life. With meticulous attention to detail, boundless 
+        creativity, and a passion for perfection, we curate events that leave a lasting 
+        impression. Our team of seasoned professionals will guide you every step of the way, 
+        from conceptualization to flawless execution. Immerse yourself in a seamless journey  
+        of innovative design, seamless logistics, and unrivaled hospitality. Join us in 
+        creating moments that transcend expectations and redefine what's possible. 
+        Let's transform your event dreams into a breathtaking reality!"</h2>
+    <br><br><br>
+    
+<center>
+    <br><br><br><br><br><br><br><br>
+    <!-- 3D Rotation Section -->
+    <div class="box">
+        <span><img src="https://images.pexels.com/photos/16991381/pexels-photo-16991381/free-photo-of-table-ready-for-celebration-to-start.jpeg"></span>
+        <span><img src="https://images.pexels.com/photos/16933554/pexels-photo-16933554/free-photo-of-table-on-garden-party.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://images.pexels.com/photos/2381596/pexels-photo-2381596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://images.pexels.com/photos/13293704/pexels-photo-13293704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://images.pexels.com/photos/1727415/pexels-photo-1727415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://www.consultis.com/wp-content/uploads/2018/03/img.jpg"></span>
+    </div>
+    
+</body>
+<br><br><br><br><br><br><br><br>
+<!-- Footer Section -->
+<footer class="footer" style="background-color: grey;">
+    <!-- Footer Content -->
+    <body>
+        <style>
+        .footer {
+              background-color: #f8f8f8;
+              padding: 20px;
+              text-align: center;
+              display: flex; /* Added flex display */
+              flex-wrap: wrap; /* Added flex-wrap for responsiveness */
+              justify-content: center; /* Center align the content horizontally */
+            }
+            
+            .footer-column {
+              display: inline-block;
+              vertical-align: top;
+              width: 25%;
+              padding: 10px;
+              box-sizing: border-box;
+            }
+            
+            .footer-column h4 {
+              margin-bottom: 10px;
+            }
+            
+            .footer-column ul {
+              list-style-type: none;
+              padding: 0;
+              margin: 0;
+            }
+            
+            .footer-column ul li {
+              margin-bottom: 5px;
+            }
+            
+            .footer-column .icon {
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              margin-right: 5px;
+              vertical-align: middle;
+            }
+            
+            a {
+              text-decoration: none;
+            }
+            footer{
+                background-color: black;
+            }
+            span{
+                color: blue;
+            }
+        </style>
+        
+        <body>
+            <footer class="footer" style="background-color: grey;">
+              <div class="footer-column">
+                <h4>Branches</h4>
+                <ul>
+                  <li>California</li>
+                  <li>Florida</li>
+                  <li>Alaska</li>
+                  <li>Arizona</li>
+                  <li>Hawaii</li>
+                </ul>
+              </div>
+              
+              <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                  <li><a href=samphome>Home</a></li>
+                  <li><a href=about>About Us</a></li>
+                  <li><a href=service>Services</a></li>
+                  <li><a href=works>Works</a></li>
+                  <li><a href=gallery>Gallery</a></li>
+                  <li><a href=registration>Registration</a></li>
+                </ul>
+              </div>
+              
+              <div class="footer-column">
+                <h4>Contact Us</h4>
+                <ul>
+                  <li>Phone: 123-456-7890</li>
+                  <li>Address: 123 Main St, City</li>
+                  <li>Email: theeventexperts6@gmail.com</li>
+                </ul>
+              </div>
+              
+              <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul>
+                  <li>
+                    <img class="icon" src="facebook-icon.png" alt="Facebook"> 
+                    <a href="#">Facebook</a>
+                  </li>
+                  <li>
+                    <img class="icon" src="twitter-icon.png" alt="Twitter"> 
+                    <a href="#">Twitter</a>
+                  </li>
+                  <li>
+                    <img class="icon" src="instagram-icon.png" alt="Instagram"> 
+                    <a href="#">Instagram</a>
+                  </li>
+                  <li>
+                    <img class="icon" src="linkedin-icon.png" alt="LinkedIn"> 
+                    <a href="#">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </footer>
+          </body>
+          
+        
+        
+        
+</footer>
+</center>
+<center><footer style="color: bisque;">created by <span>Priyadharshini & Santhiya</span> | all rights reserved!</footer></center>
+</html>

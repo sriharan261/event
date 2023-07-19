@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Registration</title>
+  <style>
+    fieldset {
+      background-color: #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h1>ONLINE REGISTRATION</h1>
+  </center>
+  <form method="post" action= {{url_for('registrationform')}}>
+    <fieldset>
+      <legend>Personal Details</legend>
+      <label><b>Name: </b><input name="name" type="text"></label>
+      <br><br>
+      <label><b>Phone Number: </b><input name="phoneNumber" type="text"></label>
+      <br><br>
+      <label><b>Address: </b></label><br><input name="address">
+      <br><br>
+      <label><b>City: </b><input name="city" type="text"></label>
+      <br><br>
+      <label><b>Pincode: </b><input name="pincode"type="text"></label>
+      <br><br>
+      <label><b>Email-id: </b><input name="email" type="text"></label>
+      <br><br>
+    </fieldset>
+     <fieldset>
+    <legend>Events</legend>
+    <label><b>Type Of Event: </b></label>
+    <select name="event">
+      <option value="1000">Birthday - $1000</option>
+      <option value="1000">House Party - $1000</option>
+      <option value="1000">Marriage - $1000</option>
+      <option value="1000">Engagement - $1000</option>
+      <option value="1000">Marriage Reception - $1000</option>
+      <option value="1000">Gender Reveal - $1000</option>
+      <option value="1000">Corporate Party - $1000</option>
+      <option value="1000">Baby Ceremony - $1000</option>
+      <option value="1000">Holi - $1000</option>
+      <option value="1000">Birthday Combo - $1000</option>
+      <option value="1000">Marriage Combo - $1000</option>
+      <option value="1000">School Functions - $1000</option>
+      <option value="1000">College Function - $1000</option>
+      <option value="1000">Award Functions - $1000</option>
+      <option value="0">---Others--- - $0</option>
+    </select>
+    <br><br>
+    <label><b>Function Range:</b></label>
+    <select name="quant1">
+      <option value="30">Classic - 30%</option>
+      <option value="40">Average - 40%</option>
+      <option value="50">Premium - 50%</option>
+    </select>
+    <br><br>
+    <label><b>Religion For Marriage: </b></label><br><textarea name="rom" placeholder="Type the religion & culture of marriage you want to have!" rows="4" cols="50"></textarea>
+    <br><br>
+    <label><b>Date Of Event: </b><input name="doe"type="date"></label>
+    <br><br>
+    <label>Menu: </label>
+    <select name="menu">
+      <option value="20">Catering Menu 1 - $20</option>
+      <option value="20">Catering Menu 2 - $20</option>
+      <option value="20">Catering Menu 3 - $20</option>
+      <option value="20">Catering Menu 4 - $20</option>
+      <option value="0">---None--- - $0</option>
+    </select>
+    <br><br>
+    <label><b>Photography: </b></label>
+    <select name="photo">
+      <option value="70">Birthday Photography - $70</option>
+      <option value="70">Corporate Photography - $70</option>
+      <option value="70">Marriage Photography - $70</option>
+      <option value="70">Gender Photography - $70</option>
+      <option value="70">Outdoor Photoshoot - $70</option>
+      <option value="70">Baby Photoshoot - $70</option>
+      <option value="70">Baby Ceremony Photoshoot - $70</option>
+      <option value="70">School Function Photography - $70</option>
+      <option value="70">College Function Photography - $70</option>
+      <option value="70">Award Function Photography - $70</option>
+      <option value="0">---Others--- - $0</option>
+    </select>
+    <br><br>
+    <label><b>Themes: </b></label>
+    <select name="theme">
+      <option value="90">Full Moon Party - $90</option>
+      <option value="90">SpeakEasy - $90</option>
+      <option value="90">The White Lotus - $90</option>
+      <option value="90">Garden Party - $90</option>
+      <option value="90">The Unicorn Birthday Party - $90</option>
+      <option value="90">Backyard Trick or Treating - $90</option>
+      <option value="90">Winter Snowflake Theme - $90</option>
+      <option value="90">The White Lotus - $90</option>
+      <option value="90">Party In Neutrals - $90</option>
+      <option value="90">Blue and White Party - $90</option>
+      <option value="90">Summer Beach Party - $90</option>
+      <option value="90">Themes Based on Your Own Interest - $90</option>
+    </select>
+    <br><br>  
+  </fieldset>
+  <fieldset>
+    <legend>Additional Options</legend>
+    <label><b>Would You like us to select the venue?</b></label>
+    <label><input type="radio" name="venue">Yes</label>
+    <label><input type="radio" name="venue">No</label>
+    <br><br>
+    <label><b>Visitor Parking:</b></label>
+    <label><input type="radio" name="parking">Yes</label>
+    <label><input type="radio" name="parking">No</label>
+    <br><br>
+    <label><b>Entertainment (dancers, singers):</b></label>
+    <select name="entertainment">
+      <option>Dancers</option>
+      <option>Singers</option>
+      <option>---None---</option>
+    </select>
+    <br><br>
+    <label><b>:</b></label>
+    <label><input type="radio" name="waiters">Yes</label>
+    <label><input type="radio" name="waiters">No</label>
+    <br><br>
+    <label><b>A/C or Non A/C:</b></label>
+    <label><input type="radio" name="ac">A/C</label>
+    <label><input type="radio" name="ac">Non A/C</label>
+    <br><br>
+    <label><b>DJ Party:</b></label>
+    <label><input type="radio" name="dj">Yes</label>
+    <label><input type="radio" name="dj">No</label>
+    <br><br>
+    <label><b>Invitation Cards:</b></label>
+    <label><input type="radio" name="invitations">Yes</label>
+    <label><input type="radio" name="invitations">No</label>
+    <br><br>
+    <label><b>Invitation Cards Range:</b></label>
+    <select name="invitations-range">
+      <option value="25">Classic - $25</option>
+      <option value="25">Average - $25</option>
+      <option value="25">Premium - $25</option>
+      <option value="0">---None--- - $0</option>
+    </select>
+    <br><br>
+    <label><b>How many Invitations Needed?</b></label>
+    <input type="text" name="invitation-quantity">
+    <br><br>
+    <label><b>Invitation Banner:</b></label>
+    <label><input type="radio" name="invitation-banner">Yes</label>
+    <label><input type="radio" name="invitation-banner">No</label>
+    <br><br>
+    <label><b>Hotel Rooms:</b></label>
+    <label><input type="radio" name="hotel-rooms">Yes</label>
+    <label><input type="radio" name="hotel-rooms">No</label>
+    <br><br>
+    <label><b>How many rooms?</b></label>
+    <input type="text" name="room-quantity">
+    <br><br>
+  </fieldset>
+  <fieldset>
+    <legend>Payment</legend>
+    <label><b>Payment:</b></label>
+    <label><input type="radio" name="payment">Cash</label>
+    <label><input type="radio" name="payment">Card</label>
+    <br><br>
+  </fieldset>
+  <button type="submit">Send</button>
+
+  <table id="totalTable" style="display: none;">
+    <tr>
+      <th>Total Advance Amount:</th>
+      <td id="totalAmount"></td>
+    </tr>
+  </table>
+</form>
+<!-- <script>
+  function total() {
+    var event = parseInt(document.getElementsByName('event')[0].value);
+    var quant1 = parseInt(document.getElementsByName('quant1')[0].value);
+    var menu = parseInt(document.getElementsByName('menu')[0].value);
+    var photo = parseInt(document.getElementsByName('photo')[0].value);
+    var theme = parseInt(document.getElementsByName('theme')[0].value);
+    var invi = parseInt(document.getElementsByName('invitations-range')[0].value);
+    var quant = parseInt(document.getElementsByName('invitation-quantity')[0].value);
+
+    var total = (event * quant1) + menu + photo + theme + (invi * quant);
+
+    var totalTable = document.getElementById('totalTable');
+    var totalAmountCell = document.getElementById('totalAmount');
+
+    totalAmountCell.innerText = '$' + total.toFixed(2);
+    totalTable.style.display = 'block';
+  }
+</script> -->
+</body>
+</html>

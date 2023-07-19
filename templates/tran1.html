@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Rotation</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: animate 20s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+            100% {
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+
+        .box span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+        }
+
+        .box span:nth-child(1) {
+            transform: rotateY(45deg) translateZ(400px);
+        }
+
+        .box span:nth-child(2) {
+            transform: rotateY(90deg) translateZ(400px);
+        }
+
+        .box span:nth-child(3) {
+            transform: rotateY(135deg) translateZ(400px);
+        }
+
+        .box span:nth-child(4) {
+            transform: rotateY(180deg) translateZ(400px);
+        }
+
+        .box span:nth-child(5) {
+            transform: rotateY(225deg) translateZ(400px);
+        }
+
+        .box span:nth-child(6) {
+            transform: rotateY(270deg) translateZ(400px);
+        }
+
+        .box span:nth-child(7) {
+            transform: rotateY(315deg) translateZ(400px);
+        }
+
+        .box span:nth-child(8) {
+            transform: rotateY(360deg) translateZ(400px);
+        }
+
+        .box span img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span><img src="https://images.pexels.com/photos/16991381/pexels-photo-16991381/free-photo-of-table-ready-for-celebration-to-start.jpeg"></span>
+        <span><img src="https://images.pexels.com/photos/16933554/pexels-photo-16933554/free-photo-of-table-on-garden-party.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://images.pexels.com/photos/2381596/pexels-photo-2381596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://images.pexels.com/photos/13293704/pexels-photo-13293704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://images.pexels.com/photos/1727415/pexels-photo-1727415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></span>
+        <span><img src="https://www.consultis.com/wp-content/uploads/2018/03/img.jpg"></span>
+    </div>
+</body>
+</html>
